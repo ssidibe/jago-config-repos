@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/billing
+    username: test
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+
+jago:
+  mail:
+    server:
+      host: localhost
+      port: 25
+      username: testb
+      password: passb
+
+billings:
+  pageSize: 20
