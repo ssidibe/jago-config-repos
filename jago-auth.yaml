@@ -1,0 +1,27 @@
+
+
+
+spring:
+  datasource:
+    url: ${E-JAGO_DB_URL}
+    password: ${E-JAGO_DB_USER}
+    username: ${E-JAGO_DB_PWD}
+
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+
+e-jago:
+  mail:
+    server:
+      sender: jago-auth@e-jago.com
+  auth:
+    jwtKey: ${E-JAGO_JWT_KEY:ddotovbdfggdfLSSLVDLSLGGDGGDGGDGDsxxxqs}
+    verifCodeLenght: 6
+    nbMaxOccur: 2
+    verifCodeExpiresMillis: 36000
+    verifCodeChars: azertyuopqsdfghjkmwxcvbnAZERTUPQSDFGHJKLMWXCVBNP1234567890
