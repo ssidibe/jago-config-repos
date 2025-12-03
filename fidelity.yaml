@@ -1,0 +1,24 @@
+e-jago:
+  mail:
+    server:
+      host: 54.198.237.215
+      sender: fidelity@e-jago.com
+
+
+spring:
+  application:
+    name: fidelity
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5433/${DB_NAME:ejago_fidelity}
+    username: dev
+    password: ${DB_PWD:dev}
+
+
+server:
+  port: 8098
