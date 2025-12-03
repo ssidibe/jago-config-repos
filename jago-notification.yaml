@@ -1,0 +1,37 @@
+spring:
+
+  cloud:
+
+    config:
+
+      enabled: false
+
+    stream:
+
+      kafka:
+
+        binder:
+
+          brokers: 35.153.99.228:9092
+
+          replicationFactor: 1
+
+          auto-create-topics: true
+
+      bindings:
+
+        notification-out-0:
+
+          destination: notification-topic
+
+          error-handler-definition: kafkaErrorHandler
+
+        notification-in-0:
+
+          destination: notification-topic
+
+          group: notification-consumer-group
+
+    function:
+
+      definition: notification
